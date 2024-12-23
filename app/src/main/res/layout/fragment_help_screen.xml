@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HelpScreen">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/rel_header">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/image_back"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_arrow"
+            app:tint="@color/myRed" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Help"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rel_header">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="50dp"
+                android:id="@+id/img_help_logo"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/question_and_answer"
+                />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/rel_lay_question1"
+                android:layout_below="@id/img_help_logo"
+                android:layout_margin="20dp"
+                android:background="@color/white"
+                android:elevation="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/question1"
+                    android:textSize="15sp"
+                    android:textColor="#24B1BD"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/how_to_donate_blood"
+                    android:layout_marginStart="15dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/rel_lay_question2"
+                android:layout_below="@id/rel_lay_question1"
+                android:layout_margin="20dp"
+                android:background="@color/white"
+                android:elevation="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/question2"
+                    android:textSize="15sp"
+                    android:textColor="#24B1BD"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/how_to_request_blood"
+                    android:layout_marginStart="15dp" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

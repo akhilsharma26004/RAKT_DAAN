@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileScreen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/rel_header">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/image_back"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_arrow"
+            app:tint="@color/myRed" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Profile"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rel_header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/img_donor"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/blood_donor_card"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/donor_data_lay"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/img_donor">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/txt_name"
+                android:text="Name"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/edtx_name"
+                android:layout_below="@id/txt_name"
+                android:hint="Name"
+                android:drawableLeft="@drawable/man"
+                android:drawablePadding="15dp"
+                android:background="@drawable/edtx_bg"
+                android:inputType="textPersonName"
+                android:maxLength="20"
+                android:textSize="15sp"
+                android:singleLine="true"
+                android:paddingLeft="20dp"
+                android:focusable="false"
+                android:enabled="false"
+                android:cursorVisible="false"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="20dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtx_name"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/txt_user_name"
+                android:text="Username"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/edtx_user_name"
+                android:layout_below="@id/txt_user_name"
+                android:hint="Username"
+                android:drawableLeft="@drawable/man"
+                android:drawablePadding="15dp"
+                android:background="@drawable/edtx_bg"
+                android:inputType="textPersonName"
+                android:maxLength="20"
+                android:textSize="15sp"
+                android:singleLine="true"
+                android:paddingLeft="20dp"
+                android:focusable="false"
+                android:enabled="false"
+                android:cursorVisible="false"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="20dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtx_user_name"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/txt_phone"
+                android:text="Password"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/edtx_password"
+                android:layout_below="@id/txt_phone"
+                android:hint="abc@123"
+                android:drawableLeft="@drawable/key__1_"
+                android:drawableTint="@color/myRed"
+                android:drawablePadding="15dp"
+                android:background="@drawable/edtx_bg"
+                android:inputType="text"
+                android:maxLength="20"
+                android:textSize="15sp"
+                android:singleLine="true"
+                android:paddingLeft="20dp"
+                android:focusable="false"
+                android:enabled="false"
+                android:cursorVisible="false"
+                android:layout_marginBottom="5dp"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="20dp"/>
+
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="45dp"-->
+<!--                android:id="@+id/save_btn"-->
+<!--                android:hint="Save"-->
+<!--                android:layout_below="@id/edtx_password"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:layout_marginHorizontal="80dp"-->
+<!--                android:textColorHint="@color/white"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:background="@drawable/done_btn_bg">-->
+<!--            </androidx.appcompat.widget.AppCompatButton>-->
+
+
+        </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+    </RelativeLayout>
+
+

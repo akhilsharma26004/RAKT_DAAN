@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainscreengraph"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.rakt_daan.MainScreen"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen">
+        <action
+            android:id="@+id/action_home_to_donateBloodScreen"
+            app:destination="@id/donateBloodScreen" />
+        <action
+            android:id="@+id/action_home_to_requestBloodScreen"
+            app:destination="@id/requestBloodScreen" />
+        <action
+            android:id="@+id/action_home_to_settingsSreenFragment"
+            app:destination="@id/settingsSreenFragment" />
+        <action
+            android:id="@+id/action_home_to_profile"
+            app:destination="@id/profile" /> <!-- Added Action to Profile Screen -->
+    </fragment>
+
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.rakt_daan.ProfileScreen"
+        android:label="fragment_profile_screen"
+        tools:layout="@layout/fragment_profile_screen" />
+
+    <fragment
+        android:id="@+id/about"
+        android:name="com.example.rakt_daan.AboutScreen"
+        android:label="fragment_about_screen"
+        tools:layout="@layout/fragment_about_screen">
+        <action
+            android:id="@+id/action_about_to_feedback"
+            app:destination="@id/feedback" />
+        <action
+            android:id="@+id/action_about_to_contactUs"
+            app:destination="@id/contactUs" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/donateBloodScreen"
+        android:name="com.example.rakt_daan.DonateBloodScreen"
+        android:label="fragment_donate_blood_screen"
+        tools:layout="@layout/fragment_donate_blood_screen" />
+
+    <fragment
+        android:id="@+id/requestBloodScreen"
+        android:name="com.example.rakt_daan.RequestBloodScreen"
+        android:label="fragment_request_blood_screen"
+        tools:layout="@layout/fragment_request_blood_screen">
+        <action
+            android:id="@+id/action_requestBloodScreen_to_donorScreen"
+            app:destination="@id/donorScreen" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/donorScreen"
+        android:name="com.example.rakt_daan.DonorScreen"
+        android:label="fragment_donor_screen"
+        tools:layout="@layout/fragment_donor_screen" />
+
+    <fragment
+        android:id="@+id/feedback"
+        android:name="com.example.rakt_daan.Feedback"
+        android:label="fragment_feedback"
+        tools:layout="@layout/fragment_feedback" />
+
+    <fragment
+        android:id="@+id/contactUs"
+        android:name="com.example.rakt_daan.ContactUs"
+        android:label="fragment_contact_us"
+        tools:layout="@layout/fragment_contact_us" />
+
+    <fragment
+        android:id="@+id/settingsSreenFragment"
+        android:name="com.example.rakt_daan.SettingsSreenFragment"
+        android:label="fragment_settings_sreen"
+        tools:layout="@layout/fragment_settings_sreen">
+        <action
+            android:id="@+id/action_settingsSreenFragment_to_helpScreen"
+            app:destination="@id/helpScreen" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/helpScreen"
+        android:name="com.example.rakt_daan.HelpScreen"
+        android:label="fragment_help_screen"
+        tools:layout="@layout/fragment_help_screen" />
+</navigation>

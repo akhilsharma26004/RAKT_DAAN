@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RegisterScreen">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:id="@+id/lay_one"
+                android:background="@drawable/lay_one_registr_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Register"
+                    android:textColor="@color/white"
+                    android:textSize="23sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="50dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="35dp">
+                </TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lay_two"
+                android:layout_below="@id/lay_one"
+                android:layout_marginTop="50dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:padding="30dp"
+                    android:elevation="10dp"
+                    android:background="@drawable/shadow_bg"
+                    android:id="@+id/reltv_lay_edtx">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxCornerRadiusTopStart="40dp"
+                        app:boxCornerRadiusTopEnd="40dp"
+                        app:boxCornerRadiusBottomStart="40dp"
+                        app:boxCornerRadiusBottomEnd="40dp"
+                        android:hint="  Full Name  "
+                        android:textColorHint="#FD5041"
+                        android:id="@+id/edtx_lay0"
+                        app:boxStrokeColor="#FD5041"
+                        android:textColor="@color/black"
+                        app:startIconDrawable="@drawable/man"
+                        app:startIconTint="@color/myRed"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/edtx_name"
+                            android:inputType="text"
+                            android:maxLength="15"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:boxCornerRadiusTopStart="40dp"
+                        app:boxCornerRadiusTopEnd="40dp"
+                        app:boxCornerRadiusBottomStart="40dp"
+                        app:boxCornerRadiusBottomEnd="40dp"
+                        android:hint="  Username  "
+                        android:layout_marginTop="10dp"
+                        android:textColorHint="#FD5041"
+                        android:layout_below="@+id/edtx_lay0"
+                        android:id="@+id/edtx_lay"
+                        app:boxStrokeColor="#FD5041"
+                        android:textColor="@color/black"
+                        app:startIconDrawable="@drawable/man"
+                        app:startIconTint="@color/myRed"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/edtx_user_name"
+                            android:inputType="text"
+                            android:maxLength="15"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/edtx_lay"
+                        android:id="@+id/edtx_lay2"
+                        android:layout_marginTop="10dp"
+                        app:boxCornerRadiusTopStart="40dp"
+                        app:boxCornerRadiusTopEnd="40dp"
+                        app:boxCornerRadiusBottomStart="40dp"
+                        app:boxCornerRadiusBottomEnd="40dp"
+                        android:textColorHint="#FD5041"
+                        android:hint="  Password  "
+                        app:passwordToggleEnabled="true"
+                        app:passwordToggleTint="#ED9A93"
+                        app:boxStrokeColor="#FD5041"
+                        app:startIconDrawable="@drawable/key__1_"
+                        app:startIconTint="@color/myRed"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/edtx_password"
+                            android:inputType="textPassword"
+                            android:maxLength="15"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:id="@+id/lay_securty_questn1"-->
+<!--                            android:layout_marginTop="10dp"-->
+<!--                            android:layout_below="@+id/edtx_lay2"-->
+<!--                            android:gravity="center_vertical"-->
+<!--                            android:layout_weight="1">-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginLeft="10dp"-->
+<!--                                android:textSize="15dp"-->
+<!--                                android:textColor="#F81805"-->
+<!--                                android:text="Security Question"/>-->
+
+<!--                            <com.google.android.material.textfield.TextInputLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                app:boxCornerRadiusTopStart="40dp"-->
+<!--                                app:boxCornerRadiusTopEnd="40dp"-->
+<!--                                app:boxCornerRadiusBottomStart="40dp"-->
+<!--                                app:boxCornerRadiusBottomEnd="40dp"-->
+<!--                                android:hint="  whats your pets name?  "-->
+<!--                                android:textColorHint="#FD5041"-->
+<!--                                android:id="@+id/edtx_lay4"-->
+<!--                                app:boxStrokeColor="#FD5041"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">-->
+
+<!--                                <com.google.android.material.textfield.TextInputEditText-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:id="@+id/edtx_security_question"-->
+<!--                                    android:inputType="text"-->
+<!--                                    android:maxLength="15"/>-->
+<!--                            </com.google.android.material.textfield.TextInputLayout>-->
+
+
+<!--                        </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:layout_below="@id/lay_securty_questn1"-->
+<!--                        android:layout_weight="1">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginLeft="10dp"-->
+<!--                            android:textSize="15dp"-->
+<!--                            android:textColor="#F81805"-->
+<!--                            android:text="Answer"/>-->
+
+
+<!--                        <com.google.android.material.textfield.TextInputLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            app:boxCornerRadiusTopStart="40dp"-->
+<!--                            app:boxCornerRadiusTopEnd="40dp"-->
+<!--                            android:hint="  e.g. Noori  "-->
+<!--                            app:boxCornerRadiusBottomStart="40dp"-->
+<!--                            app:boxCornerRadiusBottomEnd="40dp"-->
+<!--                            android:textColorHint="#FD5041"-->
+<!--                            android:id="@+id/edtx_lay5"-->
+<!--                            app:boxStrokeColor="#FD5041"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">-->
+
+<!--                            <com.google.android.material.textfield.TextInputEditText-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:id="@+id/edtx_security_questions_answer"-->
+<!--                                android:inputType="text"-->
+<!--                                android:maxLength="15"/>-->
+<!--                        </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                    </LinearLayout>-->
+
+
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_register"
+                    android:layout_below="@id/reltv_lay_edtx"
+                    android:text="Register"
+                   android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="50dp"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="15dp"
+                    android:background="@drawable/btn_one_bg">
+                </androidx.appcompat.widget.AppCompatButton>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/lay_two"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Already Have Account ?  "
+                    android:textSize="15sp"
+                    android:textStyle="bold">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_login"
+                    android:text="@string/log_in"
+                    android:textColor="#FD5041"
+                    android:textSize="15sp">
+                </TextView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

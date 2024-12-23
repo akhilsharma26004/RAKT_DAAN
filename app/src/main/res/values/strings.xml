@@ -1,0 +1,31 @@
+<resources>
+    <!-- App Name -->
+    <string name="app_name">Rakt Daan</string>
+
+    <!-- Navigation Titles -->
+    <string name="home">Home</string>
+    <string name="donate_blood">Donate Blood</string>
+    <string name="help">Help</string>
+
+    <!-- Blood Types -->
+    <string name="A_positive">A+</string>
+    <string name="B_positive">B+</string>
+    <string name="AB">AB</string>
+    <string name="O_positive">O+</string>
+    <string name="O_negative">O-</string>
+
+    <!-- Help Dialog Titles -->
+    <string name="how_to_donate_blood">How to Donate Blood</string>
+    <string name="how_to_request_blood">How to Request Blood</string>
+
+    <!-- Login/Register -->
+    <string name="sign_in">Sign In</string>
+    <string name="log_in">Log In</string>
+
+    <!-- Help Answers -->
+    <string name="donate_blood_answer">Here’s how to donate blood...</string> <!-- Customize the answer as needed -->
+    <string name="request_blood_answer">Here’s how to request blood...</string> <!-- Customize the answer as needed -->
+
+    <!-- Footer Text -->
+    <string name="developed_by">Developed by Akhil Sharma</string> <!-- Add this line -->
+</resources>

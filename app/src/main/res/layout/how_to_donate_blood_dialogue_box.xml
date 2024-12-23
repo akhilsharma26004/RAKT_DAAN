@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Donate Blood"
+        android:id="@+id/txt_donate_blood_dialog"
+        android:textSize="18sp"
+        android:textColor="@color/myRed"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_donate_blood_dialog"
+        android:layout_marginHorizontal="10dp"
+        android:text="@string/donate_blood_answer"
+        android:id="@+id/txt_answer_donate_blood_dialog"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:id="@+id/got_it_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/done_btn_bg"
+        android:text="got it"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:layout_below="@id/txt_answer_donate_blood_dialog"/>
+
+</RelativeLayout>

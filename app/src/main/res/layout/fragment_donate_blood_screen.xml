@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DonateBloodScreen">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       android:id="@+id/rel_header">
+
+       <ImageView
+           android:layout_width="20dp"
+           android:layout_height="20dp"
+           android:id="@+id/image_back"
+           android:layout_marginLeft="20dp"
+           android:layout_centerVertical="true"
+           android:src="@drawable/back_arrow"
+           app:tint="@color/myRed" />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Donate Blood"
+           android:textSize="18sp"
+           android:textColor="@color/black"
+           android:textStyle="bold"
+           android:layout_centerVertical="true"
+           android:layout_centerHorizontal="true"/>
+
+   </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rel_header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:id="@+id/lay_main">
+
+            <RelativeLayout
+                android:id="@+id/img_donor_lay"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/img_donor"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/user__1_" />
+
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/Add_profilepic_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="9.5dp"
+                    android:src="@drawable/plus_add" />
+
+            </RelativeLayout>
+
+<!--            <ImageView-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:id="@+id/img_donor"-->
+<!--                android:src="@drawable/user__1_"/>-->
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/edtx_name_doner"
+                android:layout_below="@id/img_donor_lay"
+                android:hint="Name"
+                android:drawableLeft="@drawable/man"
+                android:drawablePadding="15dp"
+                android:background="@drawable/edtx_bg"
+                android:inputType="textPersonName"
+                android:maxLength="20"
+                android:textSize="15sp"
+                android:singleLine="true"
+                android:paddingLeft="20dp"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="30dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/edtx_phone_doner"
+                android:layout_below="@id/edtx_name_doner"
+                android:hint="Phone no."
+                android:drawableLeft="@drawable/smartphone__1_"
+                android:drawablePadding="15dp"
+                android:background="@drawable/edtx_bg"
+                android:inputType="number"
+                android:maxLength="13"
+                android:textSize="15sp"
+                android:singleLine="true"
+                android:paddingLeft="20dp"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/edtx_city_doner"
+                android:layout_below="@id/edtx_phone_doner"
+                android:hint="City"
+                android:drawableLeft="@drawable/city"
+                android:drawablePadding="15dp"
+                android:background="@drawable/edtx_bg"
+                android:inputType="textPostalAddress"
+                android:maxLength="50"
+                android:textSize="15sp"
+                android:singleLine="true"
+                android:paddingLeft="20dp"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="20dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_gender"
+                android:layout_below="@id/edtx_city_doner"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="30dp"
+                android:text="Gender"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:orientation="horizontal"
+                android:id="@+id/radio_grup"
+                android:layout_below="@id/txt_gender"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp">
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio_btn_male"
+                    android:layout_marginLeft="50dp"
+                    android:text="Male"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:id="@+id/radio_btn_female"
+                    android:text="Female"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"/>
+
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_select_blood_group"
+                android:layout_below="@id/radio_grup"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:text="Select Blood Group"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/blood_groups_bg"
+                android:text="@string/A_positive"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:layout_below="@id/txt_select_blood_group"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="40dp"
+                android:id="@+id/btn_A"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/blood_groups_bg"
+                android:text="@string/B_positive"
+                android:layout_toRightOf="@id/btn_A"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:layout_below="@id/txt_select_blood_group"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/btn_B"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/blood_groups_bg"
+                android:text="@string/AB"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:layout_below="@id/txt_select_blood_group"
+                android:layout_toRightOf="@id/btn_B"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/btn_AB"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/blood_groups_bg"
+                android:text="@string/O_positive"
+                android:layout_toRightOf="@id/btn_AB"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:layout_below="@id/txt_select_blood_group"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/btn_O_pos"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/blood_groups_bg"
+                android:text="@string/O_negative"
+                android:layout_toRightOf="@id/btn_O_pos"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:layout_below="@id/txt_select_blood_group"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/btn_O_neg"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:id="@+id/done_btn"
+                android:hint="Submit Details"
+                android:layout_below="@id/btn_A"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginHorizontal="30dp"
+                android:textColorHint="@color/white"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/done_btn_bg">
+            </androidx.appcompat.widget.AppCompatButton>
+
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
